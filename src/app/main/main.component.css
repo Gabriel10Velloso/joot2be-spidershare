@@ -1,0 +1,162 @@
+.mdl-layout, .mdl-js-layout, .mdl-layout--fixed-header{
+/* z-index: 100; */
+min-width: 100%;
+position: fixed;
+}
+
+.imgLogo{
+    width: 70px;
+    max-height: 40px;
+}
+
+.mdl-navigation {
+ width: 100%;
+}
+
+.mdl-layout-title {
+ margin-right: 10px;
+}
+
+.mdl-layout-title>img {
+ margin:5px 0px 0px 0px; 
+ height: 50px;
+}
+
+.mdl-layout__header {
+ height: 64px; 
+ background-color: rgb(79, 111, 144);
+}
+
+.mdl-layout__content {
+ width: 95%;
+}
+
+.mdl-layout__header-row {
+ padding: 0 40px 0 16px;
+}
+
+.mdl-layout__drawer-button {
+ right: 0;
+ left: inherit;
+}
+
+.blur-main-playlist-opened {
+ opacity: 0.4;
+ transition: all 0.3s ease;
+ -moz-transition: all 0.3s ease;
+ -ms-transition: all 0.3s ease;
+ -webkit-transition: all 0.3s ease;
+ -o-transition: all 0.3s ease;
+}
+
+.mdl-js-snackbar {
+ bottom: 0;
+ z-index: 999;
+ right: 0;
+ background-color: rgba(196, 48, 43, 0.85);
+}
+
+
+.mdl-tabs__tab-bar{
+background: rgba(79,111,140,1);
+display         : flex;
+flex-direction  : row;
+justify-content : right; 
+align-content   : space-between; 
+align-items     : flex-end; 
+
+height          : 44px;
+padding         : 10px;
+margin          :0%;
+/* border-bottom   : 20px solid $tab-border-color; */
+
+}
+
+.mdl-tabs__tab {
+ margin: 0;
+ border: none;
+ padding: 0 24px 0 24px;
+ float: left;
+ position: relative;
+ display: block;
+ text-decoration: none;
+ height: 48px;
+ line-height: 48px;
+ text-align: center;
+ font-weight: 500;
+ font-size: 14px;
+ text-transform: uppercase;
+ color: white;
+ overflow: hidden; 
+}
+
+ .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+   color: black; 
+ }
+ .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+   height: 2px;
+   width: 100%;
+   display: block;
+   content: " ";
+   bottom: 0px;
+   left: 0px;
+   position: absolute;
+   background: white
+  }
+
+ /* .mdl-layout__header {
+   min-height: 20px; 
+   max-height: 30px; 
+ }  */
+
+ /* .mdl-layout__header{
+  position:fixed;
+  z-index:999; 
+
+  overflow: hidden;;
+ } */
+
+ @media only screen and (min-width: 0px) {
+     .playButtom{
+         display: none;
+     }
+     .playlistIcon {
+        border: 0;
+        background: nome;
+        color: #000000;
+        position: relative;
+        margin: 12px 7px 0px 2px;
+        font-size: 30px;
+    }
+ }
+
+ @media only screen and (min-width: 410px) {
+     .playlistIcon {
+         display: none;
+     }
+     .playButtom{
+         display: inline-block;
+         color: white;
+         margin: 10px 7px 0px 7px;
+         font-size: 16px;
+     }
+ }
+
+
+
+@media (max-width: 850px) {
+ .mdl-layout-title>img {
+   margin:10px 0px 0px -10px; 
+   height: 40px;
+ }
+}
+
+@media (max-width: 1150px) {
+ .mdl-layout__content {
+   width: 100%;
+ }
+ .yt-player,
+ .ytp-cued-thumbnail-overlay {
+   width: 100px;
+ }
+}

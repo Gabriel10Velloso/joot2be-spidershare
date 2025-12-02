@@ -1,0 +1,325 @@
+/* Hader */
+.mdl-layout__header {
+    height: 64px;
+    background-color: #009688;  /* cor navBar */
+    /* position : fixed;
+    margin: -15px 0px 0px 0px; */
+}
+
+.imgLogo{
+    width: 70px;
+    max-height: 40px;
+}
+
+.mdl-layout__header-row {  /* alinha os itens dentro do navBar */   
+    padding: 0 40px 0 16px;
+}
+
+.mdl-layout-title>img {/* tamanho logo */ 
+    margin:5px 0px 0px 0px; 
+    height: 50px;
+}
+
+.mdl-textfield {
+    margin-left: 10px; /* distancia do imput para o logo Search navBar */ 
+}
+
+.mdl-textfield__input {
+    border-bottom: 1px solid rgba(255, 255, 255, .12); /* cor linha input searche */ 
+}
+
+.mdl-textfield__label {
+    color: rgba(255, 255, 255, .26);
+}
+
+.mdl-textfield__label:after {
+    background-color: #fff; /* Ao entrar com os dados no imput Search a cor muda pra branco */ 
+}
+
+.retamgulo { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+    position: absolute;
+    width: 300px;
+    /* height: 100px; */
+    font-size: 20px; 
+    background: #009688;
+    margin: 20px 0 0 10px  !important;
+    padding: 10px;
+}
+ 
+/*  ⏩ ⏩ ⏩ ⏩ ⏩ ⏩  Ajuste card na horizontal*/
+
+.card-img-top{
+    margin:0px 0px 0px 7px; /* Ajusta a descrição do vídeo em cima da playlist  */ 
+    padding: 3px 0px 3px 0px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    width: 250px;
+    font-size: 14px;
+    position: absolute;
+    color: #fff;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 14px;
+}
+
+.espaco_card{
+    margin-left: 7px;
+    
+}
+
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 65px; /* distância dos cards altura TOP  */ 
+    padding: 5px 0px 5px 0px;   
+    -webkit-overflow-scrolling: touch;
+    cursor:pointer;
+}
+
+.retanguloGeral{
+    margin: 12px 0 -65px 7px ;
+    padding: 7px 10px 8px 10px;
+    text-align: center;
+    font-size: 25px; 
+    position: relative;
+    height: 20px;
+    width: 300px;
+    border-radius:10px 10px 0px 0px; 
+}
+.retamgulo1 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+     background: #0288d1;
+}
+
+.retamgulo2 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+
+    background: #009688; 
+}
+
+.retamgulo3 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+    background: #ff8a65;
+}
+
+.retamgulo4 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */   
+    background: #ffeb3b;  
+}
+
+
+.retamgulo5 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */    
+    background: #7e57c2; 
+}
+
+.retamgulo6 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+    background: #1E9600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.retamgulo7 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.retamgulo8 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.retamgulo9 { /* Ajusta o tamnho da caixa dos Gêneros musicas  */ 
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+}
+.retamgulo10{
+    background: #546e7a;  /* fallback for old browsers */
+}
+
+.retamgulo11{
+    background: #ba68c8;  /* fallback for old browsers */
+}
+
+.back1{
+    background: #2196f3;
+}
+
+.back2{
+    background: #009688;
+}
+
+.back3{
+    background: #ff8a65;;
+}
+
+.back4{
+    background: #ffeb3b;
+    margin-bottom: 20px;
+}
+
+.back5{
+    background: #7e57c2;
+}
+
+.back6{
+    background: #1E9600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.back7{
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.back8{
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+.back8{
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.back9 {
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.back10 {
+    background: #546e7a;  /* fallback for old browsers */
+}
+
+.back11 {
+    background: #ba68c8;  /* fallback for old browsers */
+}
+
+&::-webkit-scrollbar {
+    display: none;
+}
+
+/* ⏩ Vídeo Quando Abre dentro Modal */
+
+.videoTamanho {
+    width: 100% !important; 
+    max-height: 3000px !important; 
+    min-height: 300px !important; 
+    margin: 00px 5px 25px 0px;
+}
+
+.retamgulo1ModalPadrao{
+    position: absolute;
+    width: 304px;
+    border-radius:10px 10px 0px 0px; 
+    font-size: 20px; 
+    margin: -50px 0 0px -12px ;
+    padding: 15px 10px 10px 10px;
+    text-align: center;
+    font-size:30px; 
+
+}
+.retamgulo1Modal{
+    background: #0288d1; 
+}
+
+.retamgulo2Modal{ 
+    background: #009688;  
+}
+
+.retamgulo3Modal{
+    /* border: 2px solid #ff8a65; */
+    background: #ff8a65;
+}
+
+.retamgulo4Modal{
+    background: #ffeb3b;
+}
+
+.retamgulo5Modal{
+   background: #7e57c2;
+}
+
+
+.retamgulo6Modal {
+    background: #1E9600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.retamgulo7Modal {
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.retamgulo8Modal{
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.retamgulo9Modal {
+    background: #00c3ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.retamgulo10Modal{
+    background: #546e7a;  
+}
+
+
+.retamgulo11Modal{
+    background: #ba68c8;  
+}
+
+.card-img-top2{
+    margin:0px 0px 5px 0px; /* Ajusta a descrição do vídeo em cima da playlist  */ 
+    padding: 3px 0px 3px 0px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    width: 300px;
+    font-size: 14px; 
+    color: #fff;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ⏩ Vídeo Quando Abre Modal */
+
+/* ⏩ scrollbar */
+/* .scrolling-wrapper::-webkit-scrollbar-track {
+    background-color: #dad7d7;
+} */
+
+.scrolling-wrapper::-webkit-scrollbar {
+    width:8px;
+    height: 8px;
+    /* background: rgb(244, 244, 244); */
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+    background: #c4c4c4;  /* cor barra lateral scrooll */   
+} 
+
+.sss{
+    margin: 0px 0px -720px 0px;
+}

@@ -1,0 +1,52 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">
+                <a [href]="['/videos']" >
+                    <img class="imgLogo" src="assets/img/logo.png" >
+                </a>
+            </span>
+        </div>
+    </header>
+   
+    
+    <!-- <div class = "mdl-layout__drawer">
+        <span class = "mdl-layout-title">Material Design Tutorial</span>
+            <nav class = "mdl-navigation">
+                <a class = "mdl-navigation__link" href = "">Home</a>
+                <a class = "mdl-navigation__link" href = "">About</a>  
+            </nav>
+    </div> -->
+
+    <main class="mdl-layout__content">
+            <h6>Attention: If your download return <strong>error.mp3 or error.mp4, </strong> &nbsp; try to find the same video or song at different channel !</h6>
+        <div id="demo"></div>
+        <img class="imgDownload" src="{{ downloadID.snippet?.thumbnails.medium.url }}" alt="" />
+        <div class="mdl-grid">
+            <!-- <div class = "mdl-cell mdl-cell--4-col graybox">
+                </div> -->
+
+            <div class="mdl-cell mdl-cell--12-col graybox">
+                {{ downloadID.snippet.title }}
+            </div>
+            <!-- <div class = "mdl-cell mdl-cell--4-col graybox">
+                    3
+                </div> -->
+        </div>
+        <form #formLogin="ngForm" class="testeaa">
+            <button [disabled]="!formLogin.valid" class="convert-button2" onclick="mp3()">
+                <!-- <i class="material-icons" id="iconDownload" >cloud_download</i> -->
+                MP3
+            </button>
+            <input type="text" id="convert-button" value="https://www.youtube.com/watch?v={{ downloadID.id }}"
+                placeholder=" https://www.youtube.com/watch?v=0NuH3UfPHA8 " class="URL-input" disabled />
+            <button [disabled]="!formLogin.valid" class="convert-button" onclick="mp4()">
+                <!-- <i class="material-icons" id="iconDownload" >cloud_download</i> -->
+                MP4
+            </button>
+        </form>
+    </main>
+</div>
+
+<canvas id="my_canvas" width="70px" height="70px" style="border: 1px rgb(163, 22, 22)">
+</canvas>

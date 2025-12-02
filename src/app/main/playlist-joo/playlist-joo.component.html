@@ -1,0 +1,308 @@
+<!-- carrocel interessante pra imagens   https://codepen.io/mayurbirle/pen/NvXKPq -->
+
+<!--  muito interessante fazer algo https://codepen.io/ckeleher/pen/rJEbaE -->
+
+<!-- flickity --- https://css-tricks.com/creating-responsive-touch-friendly-carousels-with-flickity/ -->
+
+<!-- https://www.html5rocks.com/pt/tutorials/dnd/basics/ -->
+<div class=" mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-title">
+                <img class="imgLogo" src="assets/img/logo.png" />
+            </div>
+            <nav class="mdl-navigation">
+                <!-- <div class="mdl-textfield mdl-js-textfield ">
+                    <input class="mdl-textfield__input" type="text" type="text" id="query" autocomplete="off">
+                        <label class="mdl-textfield__label" for="query">Search  </label>
+                </div>
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">search</i>
+                </button>    -->
+                <!-- Está com Href por causa do problema no botão de exportar e importar 
+                É necessário que a página carregue para o botão funcionar -->
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect"    [href]= "'/videos'" 
+                style="color:white; margin: 8px 0px 0px 10px"  target="_self">
+                    VIDEOS
+                </a>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<section class="retamgulo1 retanguloGeral">Alternative Rock</section>
+<div class="scrolling-wrapper mdl-layout__content back1">
+    <div class="" *ngFor="let aternativerock of aternativerockList()">
+        <p class="card-img-top">{{ aternativerock.title }}</p>
+        <img class="espaco_card" width="250" height="180" 
+            (click)="showDialog1 = !showDialog1" src="{{ aternativerock.thumbnails }}"
+            (click)="play(aternativerock.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog1">
+    <section class="retamgulo1Modal retamgulo1ModalPadrao">
+        Alternative Rock
+    </section>
+    <div class="" *ngFor="let aternativerock of aternativerockList()">
+        <div *ngIf="idPlayList === aternativerock.id">
+            <p class="card-img-top2">{{ aternativerock.title }}</p>
+            <!-- https://developers.google.com/youtube/player_parameters -->
+            <!-- https://stackoverflow.com/questions/8564712/removing-the-play-on-youtube-overlay-on-embedded-videos -->
+            <!-- https://fernandosarachaga.com/en/youtube-how-to-configure-iframe-parameters/ -->
+            <!-- https://stackoverflow.com/questions/52886853/youtube-embed-showinfo-has-been-deprecated -->
+            <!-- <iframe class="videoTamanho" 
+                    src="http://www.youtube.com/embed?listType=playlist&controls=2&autohide=1&showinfo=2&list=RD7wtfhZwyrcc" >
+            </iframe> -->
+            <iframe class="videoTamanho" [src]="aternativerock.id | url: 'https://www.youtube.com/embed/watch?list='" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; 
+                    gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo10 retanguloGeral">Rock</section>
+<div class="scrolling-wrapper mdl-layout__content back10">
+    <div class="" *ngFor="let rock of rockList()">
+        <p class="card-img-top">{{ rock.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog10 = !showDialog10" src="{{ rock.thumbnails }}"
+            (click)="play(rock.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog10">
+    <section class="retamgulo10Modal retamgulo1ModalPadrao">Rock</section>
+    <div class="" *ngFor="let rock of rockList()">
+        <div *ngIf="idPlayList === rock.id">
+            <p class="card-img-top2">{{ rock.title }}</p>
+            <iframe class="videoTamanho" [src]="rock.id | url: 'https://www.youtube.com/embed/watch?list='" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo7 retanguloGeral">Electronic Music</section>
+<div class="scrolling-wrapper mdl-layout__content back7">
+    <div class="" *ngFor="let eletronica of eletronicaList()">
+        <p class="card-img-top">{{ eletronica.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog7 = !showDialog7" src="{{ eletronica.thumbnails }}"
+            (click)="play(eletronica.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog7">
+    <section class="retamgulo7Modal retamgulo1ModalPadrao">
+        Electronic Music
+    </section>
+    <div class="" *ngFor="let eletronica of eletronicaList()">
+        <div *ngIf="idPlayList === eletronica.id">
+            <p class="card-img-top2">{{ eletronica.title }}</p>
+            <iframe class="videoTamanho" [src]="eletronica.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo9 retanguloGeral">Funk</section>
+<div class="scrolling-wrapper mdl-layout__content back9">
+    <div class="" *ngFor="let funk of funkList()">
+        <p class="card-img-top">{{ funk.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog9 = !showDialog9" src="{{ funk.thumbnails }}"
+            (click)="play(funk.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog9">
+    <section class="retamgulo9Modal retamgulo1ModalPadrao">Funk</section>
+    <div class="" *ngFor="let funk of funkList()">
+        <div *ngIf="idPlayList === funk.id">
+            <p class="card-img-top2">{{ funk.title }}</p>
+            <iframe class="videoTamanho" [src]="funk.id | url: 'https://www.youtube.com/embed/watch?list='" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo8 retanguloGeral">Heavy Metal</section>
+<div class="scrolling-wrapper mdl-layout__content back8">
+    <div class="" *ngFor="let heavymetal of heavymetalList()">
+        <p class="card-img-top">{{ heavymetal.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog8 = !showDialog8" src="{{ heavymetal.thumbnails }}"
+            (click)="play(heavymetal.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog8">
+    <section class="retamgulo8Modal retamgulo1ModalPadrao">Heavy Metal</section>
+    <div class="" *ngFor="let heavymetal of heavymetalList()">
+        <div *ngIf="idPlayList === heavymetal.id">
+            <p class="card-img-top2">{{ heavymetal.title }}</p>
+            <iframe class="videoTamanho" [src]="heavymetal.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo11 retanguloGeral">National Bands</section>
+<div class="scrolling-wrapper mdl-layout__content back11">
+    <div class="" *ngFor="let national of nationallList()">
+        <p class="card-img-top">{{ national.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog11 = !showDialog11" src="{{ national.thumbnails }}"
+            (click)="play(national.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog11">
+    <section class="retamgulo11Modal retamgulo1ModalPadrao">
+        National Bands
+    </section>
+    <div class="" *ngFor="let national of nationallList()">
+        <div *ngIf="idPlayList === national.id">
+            <p class="card-img-top2">{{ national.title }}</p>
+            <iframe class="videoTamanho" [src]="national.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo3 retanguloGeral">Pagode</section>
+<div class="scrolling-wrapper mdl-layout__content back3">
+    <div class="" *ngFor="let pagode of pagodeList()">
+        <p class="card-img-top">{{ pagode.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog3 = !showDialog3" src="{{ pagode.thumbnails }}"
+            (click)="play(pagode.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog3">
+    <section class="retamgulo3Modal retamgulo1ModalPadrao">Pagode</section>
+    <div class="" *ngFor="let pagode of pagodeList()">
+        <div *ngIf="idPlayList === pagode.id">
+            <p class="card-img-top2">{{ pagode.title }}</p>
+            <iframe class="videoTamanho" [src]="pagode.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo5 retanguloGeral">Pop</section>
+<div class="scrolling-wrapper mdl-layout__content back5">
+    <div class="" *ngFor="let pop of popList()">
+        <p class="card-img-top">{{ pop.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog5 = !showDialog5" src="{{ pop.thumbnails }}"
+            (click)="play(pop.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog5">
+    <section class="retamgulo5Modal retamgulo1ModalPadrao">Pop</section>
+    <div class="" *ngFor="let pop of popList()">
+        <div *ngIf="idPlayList === pop.id">
+            <p class="card-img-top2">{{ pop.title }}</p>
+            <iframe class="videoTamanho" [src]="pop.id | url: 'https://www.youtube.com/embed/watch?list='" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo2 retanguloGeral">Post Grunge</section>
+<div class="scrolling-wrapper mdl-layout__content back2">
+    <div class="" *ngFor="let postgrunge of postgrungeList()">
+        <p class="card-img-top">{{ postgrunge.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog2 = !showDialog2" src="{{ postgrunge.thumbnails }}"
+            (click)="play(postgrunge.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog2">
+    <section class="retamgulo2Modal retamgulo1ModalPadrao">Post Grunge</section>
+    <div class="" *ngFor="let postgrunge of postgrungeList()">
+        <div *ngIf="idPlayList === postgrunge.id">
+            <p class="card-img-top2">{{ postgrunge.title }}</p>
+            <iframe class="videoTamanho" [src]="postgrunge.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo6 retanguloGeral">Reggae</section>
+<div class="scrolling-wrapper mdl-layout__content back6">
+    <div class="" *ngFor="let reggae of reggaeList()">
+        <p class="card-img-top">{{ reggae.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog6 = !showDialog6" src="{{ reggae.thumbnails }}"
+            (click)="play(reggae.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog6">
+    <section class="retamgulo6Modal retamgulo1ModalPadrao">Reggae</section>
+    <div class="" *ngFor="let reggae of reggaeList()">
+        <div *ngIf="idPlayList === reggae.id">
+            <p class="card-img-top2">{{ reggae.title }}</p>
+            <iframe class="videoTamanho" [src]="reggae.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<section class="retamgulo4 retanguloGeral">Sertanejo</section>
+<div class="scrolling-wrapper mdl-layout__content back4">
+    <div class="" *ngFor="let sertanejo of sertanejoList()">
+        <p class="card-img-top">{{ sertanejo.title }}</p>
+        <img class="espaco_card" width="250" height="180" (click)="showDialog4 = !showDialog4" src="{{ sertanejo.thumbnails }}"
+            (click)="play(sertanejo.id)" />
+    </div>
+</div>
+<modal [(visible)]="showDialog4">
+    <section class="retamgulo4Modal retamgulo1ModalPadrao">Sertanejo</section>
+    <div class="" *ngFor="let sertanejo of sertanejoList()">
+        <div *ngIf="idPlayList === sertanejo.id">
+            <p class="card-img-top2">{{ sertanejo.title }}</p>
+            <iframe class="videoTamanho" [src]="sertanejo.id | url: 'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                        gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- <button (click)="showDialog4 = !showDialog4" class="btn">Close</button> -->
+    </div>
+</modal>
+
+<!-- <div *ngFor="let sertanejo2 of sertanejoList() ">
+        {{sertanejo2.title}}
+            <iframe class="videoTamanho" 
+            [src]="sertanejo2.id|url:'https://www.youtube.com/embed/watch?list='"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        
+            </div> -->

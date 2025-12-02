@@ -1,0 +1,193 @@
+* {
+	text-align: center;
+}
+
+h6{
+    margin-left: 10px;
+    margin-right:10px;  
+}
+
+strong{
+    background: red;
+   padding: 0px 5px 0px 10px;
+ 
+}
+
+.mdl-layout-title>img {/* tamanho logo */ 
+    margin:5px 0px 0px -50px; 
+    height: 50px;
+}
+
+.imgLogo{
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: -65px;
+}
+
+
+.mdl-layout__header {
+    height: 64px;
+    background-color: #3c76ac;  /* cor navBar */
+    /* position : fixed;
+    margin: -15px 0px 0px 0px; */
+}
+
+.mdl-layout__content{
+    margin-top: 40px;
+}
+
+
+.URL-input {
+    height: 28px;
+    background: rgb(255, 255, 255);
+    border:0px solid rgb(245, 5, 5);
+	background: rgb(255, 255, 255);
+    outline:none;
+    width:30em;
+}
+
+
+.convert-button {
+    height: 30px;
+    width: 70px;
+	border-radius:0px 4px 4px 0px;
+	border:0px solid #0485ff;
+	background: #0485ff;
+    color:white;
+    margin-bottom: 30px; 
+}
+.convert-button2 {
+    height: 30px;
+    width: 70px;
+	border-radius:4px 0px 0px 4px;
+	border:0px solid #ff0000;
+	background: #ff0000;
+    color:white;
+    margin-bottom: 30px; 
+}
+
+canvas{
+    margin: 260px 0px 0px 48%;
+    /* position: absolute; */
+    position: absolute;
+    z-index: 100;
+  
+
+}
+
+#demo{
+    margin: 30px 0px 0px 45%;
+    z-index: 500;
+    position: absolute;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 560px) {
+
+    
+ 
+
+    #demo{
+        margin: 30px 0px 0px 36%;
+   
+    }
+
+    
+.URL-input {
+    font-size: 12px;
+    height: 27px;
+    width:25em;
+}
+
+
+}
+
+@media only screen and (max-width: 470px) {
+
+    h6{
+        margin-top: 10px;
+ 
+    }
+    
+
+    #demo{
+        margin: 30px 0px 0px 30%;
+    }
+
+    .URL-input {
+        margin-top:10px; 
+
+
+    }
+
+    .mdl-layout__content{
+        margin-top: 20px;
+    }
+    
+
+    .convert-button {
+        top: 370px;
+        width: 150px;
+        left: 50%;
+        position: absolute;
+        height: 28px;
+        margin-top: 30px; 
+    
+      
+    }
+
+    .convert-button2 {
+        top: 370px;
+        width: 150px;
+        position: absolute;
+        height: 28px;
+        margin-top: 30px; 
+       
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    canvas{
+        margin: 250px 0px 0px 42%;
+    }
+    .imgDownload{
+        width: 270px;
+        height: 170px;
+    }
+
+    .mdl-layout__content{
+        margin-top: 10px;
+    }
+    
+
+    .convert-button {
+        top: 360px;
+    }
+
+    .convert-button2 {
+        top: 360px;
+    }
+
+}
+
+
+@media only screen and (max-width: 290px) {
+
+div {
+    display: none;
+}
+
+}

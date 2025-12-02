@@ -1,0 +1,57 @@
+<div class="mdl-cell custom-cell mdl-cell--2-col" id="{{i + video.id}}" *ngFor="let video of videoList; let i = index;" [ngClass]="{'last-item': i === videoList.length-1}">
+    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title mdl-card--expand" (click)="play(video)" [ngStyle]="{'background': '#000 url(' + video.snippet?.thumbnails.high.url + ') center center no-repeat', 'background-size': '125%'}">
+        <div class="video-info-block">
+          <div class="video-informations">
+            <span style="float: left;">
+                          <i class="material-icons">thumb_up</i>
+                          {{ video.statistics?.likeCount | videoLikesViews }}
+                      </span>
+            <span style="margin-left: 10px;">
+                          <i class="material-icons">remove_red_eye</i>
+                          {{ video.statistics?.viewCount | videoLikesViews }}
+                      </span>
+            <span style="margin-left: 10px; float: right;">
+                          <i class="material-icons">access_time</i>
+                          {{ video.contentDetails?.duration | videoDuration }}
+                      </span>
+          </div>
+        </div>
+        <div class="video-name-block">
+          <div class="video-informations">
+            {{ video.snippet?.title | videoName: [65, 62] }}
+          </div>
+        </div>
+        <div class="video-play-button">
+          <i class="material-icons">play_circle_filled</i>
+        </div>
+      </div>
+      <div class="mdl-card__supporting-text">
+            <!-- <form>
+            <input type="button" value="Put Your Text Here" 
+            onclick="window.location.href='http://www.hyperlinkcode.com/button-links.php'" />
+            </form> -->
+        <!-- <a [attr.href]="'//' + candidate+'/'+youtube+video.id " 
+        target="_blank" [title]="candidate" (click)="addToPlaylist2(video)"
+         class="btnDownload btn" id="generate" >Download</a>       -->
+         <button  class="btnDownload"> 
+            <a [routerLink]="['/download']" routerLinkActive=" active"
+             target="framename" (click)="addToPlaylist2(video)"
+             (click)="getDownload()" (click)="getDownload2()"
+                id="generate" >Download   </a>     
+        </button> 
+  
+      <i (click)="addToPlaylist(video)" class="material-icons icon_add">playlist_add</i>
+    </div>
+    </div>
+  </div>
+  
+  <div class="loader loader-progress" *ngIf="loadingInProgress">
+    <div class="loading"></div>
+  </div>
+  
+  <div class="carregarVideos">.</div>
+  
+  
+  
+  
